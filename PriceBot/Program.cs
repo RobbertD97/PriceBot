@@ -1,8 +1,8 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Security.Authentication;
 using System.Text.Json;
 using HtmlAgilityPack;
+using PriceBot.Classes;
 
 public partial class Program
 {
@@ -10,7 +10,6 @@ public partial class Program
     static readonly Dictionary<string, Product> lastKnownProducts = new();
     static readonly List<string> PotentiallyOutOfStockProducts = new();
     static readonly HashSet<string> OutOfStockNotifiedUrls = new();
-
 
     private const string PricebotWebhookUrl = "https://discord.com/api/webhooks/1128422331950321785/T7iUiECrfnVcJn_h7yR-xcjZY1UlG_oS7XjhojwWQLnK4-sQAK-oKNBEdVQw4L5Ut8LZ";
     private const string OutOfStockWebhookUrl = "https://discord.com/api/webhooks/1133762623670849559/dnGsicqo95ELYIS2FoEzNiRzIPk1AWeK4v74Kz4CAyQHLq-aHP6t7bqC8rPVe9ITJ7t6";

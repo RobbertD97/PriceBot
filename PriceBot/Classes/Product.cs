@@ -1,6 +1,6 @@
-﻿public partial class Program
+﻿namespace PriceBot.Classes
 {
-    class Product
+    public class Product
     {
         public string? Title { get; set; }
         public double? Price { get; set; }
