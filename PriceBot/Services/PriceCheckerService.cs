@@ -71,6 +71,7 @@ namespace PriceBot.Services
                 // If the price is found, the product is back in stock
                 if (priceNodeBcc != null)
                 {
+                    OutOfStockNotifiedUrls.Remove(url);
                     PotentiallyOutOfStockProducts.Remove(url);
                 }
             }
@@ -82,6 +83,7 @@ namespace PriceBot.Services
             if (!OutOfStockNotifiedUrls.Contains(url))
             {
                 await _notificationService.SendOutOfStockMessage(url);
+
                 OutOfStockNotifiedUrls.Add(url);
                 PotentiallyOutOfStockProducts.Add(url);
             }

@@ -11,12 +11,12 @@ namespace PriceBot
         static async Task Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
-                .AddTransient<ProductService>()
-                .AddTransient<KieskeurigService>()
-                .AddTransient<NotificationService>()
-                .AddTransient<PriceCheckerService>()
+                .AddSingleton<ProductService>()
+                .AddSingleton<KieskeurigService>()
+                .AddSingleton<NotificationService>()
+                .AddSingleton<PriceCheckerService>()
+                .AddTransient<HtmlWeb>()
                 .AddHttpClient()
-                .AddSingleton<HtmlWeb>()
                 .BuildServiceProvider();
 
             var priceCheckerService = serviceProvider.GetRequiredService<PriceCheckerService>();
@@ -35,7 +35,7 @@ namespace PriceBot
                 await priceCheckerService.RecheckOutOfStockProductsAsync();
 
                 Console.WriteLine("\n");
-                await Task.Delay(TimeSpan.FromMinutes(30));
+                await Task.Delay(TimeSpan.FromMinutes(0.5));
             }
         }
     }
