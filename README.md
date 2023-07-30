@@ -8,7 +8,7 @@ docker create --name pricebot-bcc pricebot-image
 -> Run the Docker container
 docker ps
 
-docker commit pricebot-bcc pricebot-image
+docker commit pricebot-bcc pricebot-image  
 docker save -o pricebot-bcc.tar pricebot-image
 
 
