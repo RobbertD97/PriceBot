@@ -35,7 +35,7 @@ namespace PriceBot
                 await priceCheckerService.RecheckOutOfStockProductsAsync();
 
                 Console.WriteLine("\n");
-                await Task.Delay(TimeSpan.FromMinutes(0.5));
+                await Task.Delay(TimeSpan.FromMinutes(30));
             }
         }
     }
