@@ -2,6 +2,7 @@
 using PriceBot.Services;
 using PriceBot.Helpers;
 using HtmlAgilityPack;
+using PriceBot.Classes;
 
 namespace PriceBot
 {
