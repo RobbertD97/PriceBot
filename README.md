@@ -12,5 +12,5 @@ docker commit pricebot-bcc pricebot-image
 docker save -o pricebot-bcc.tar pricebot-image
 
 
--> Import .tar file from Container Manager -> Image
+-> Import .tar file from Container Manager -> Image  
 -> Create Volume mapping: /docker/appdata/pricebot-bcc/urls-to-track.json -> /App/urls-to-track.json
