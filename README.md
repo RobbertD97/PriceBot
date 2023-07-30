@@ -2,7 +2,7 @@ dotnet publish -c release
 
 -> Start Docker
 
-docker build -t pricebot-image -f Dockerfile .
+docker build -t pricebot-image -f Dockerfile .  
 docker create --name pricebot-bcc pricebot-image
 
 -> Run the Docker container
