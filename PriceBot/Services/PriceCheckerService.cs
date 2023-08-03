@@ -74,6 +74,10 @@ namespace PriceBot.Services
                     OutOfStockNotifiedUrls.Remove(url);
                     PotentiallyOutOfStockProducts.Remove(url);
                 }
+                else
+                {
+                    await Console.Out.WriteLineAsync($"Product on {url} is (still) not available.");
+                }
             }
         }
 

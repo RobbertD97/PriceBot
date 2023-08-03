@@ -10,7 +10,7 @@ namespace PriceBot.Services
     public class KieskeurigService
     {
         private const string BaseUrlKieskeurig = "https://www.kieskeurig.nl/search?q=%24"; // 'Dollar sign' to limit search to one result
-        private const string PriceXPathKieskeurig = "//div[@class='product-tile__price']//strong";
+        private const string PriceXPathKieskeurig = "//div[@class='price-row__prices']/span[@class='delivery-price']";
         private const string ErrorMessageXPath = "//div[contains(@class, 'error-message')]";
 
         private readonly ProductService _productService;
